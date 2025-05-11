@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evans Mutuma | Portfolio</title>
   <meta name="description" content="Portfolio website for Evans Mutuma, a full stack developer specializing in Django, React, and backend development." />
   <meta name="keywords" content="Evans Mutuma, full stack developer, Django, React, Python, backend, portfolio" />
@@ -45,7 +45,7 @@
       border-radius: 30px;
       font-weight: bold;
     }
-    .skills, .portfolio, footer {
+    .skills, .portfolio, .testimonials, footer {
       background-color: var(--gray);
       color: #aaa;
     }
@@ -68,6 +68,7 @@
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -83,11 +84,26 @@
       </div>
       <div class="col-md-7 text-md-start text-center">
         <h1 class="display-5">Hi, I'm Evans Mutuma 👋</h1>
-        <p class="lead">Full Stack Developer | Backend Specialist | ICT specialist | Support Engineer</p>
+        <p class="lead">Full Stack Developer | Backend Specialist | ICT Specialist | Support Engineer</p>
         <div class="mt-3">
           <a href="files/Evans_Mutuma_CV.docx" class="btn btn-green me-2" download>📄 Download CV</a>
           <a href="https://github.com/Evanstush" target="_blank" class="btn btn-outline-light">💻 GitHub</a>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section class="about py-5" id="about">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-5">👨‍💻 About Me</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>I am a full-stack developer with expertise in Python, Django, and React. I am passionate about creating scalable, efficient, and reliable systems. With a background in ICT, I am adept at both backend and frontend development, and I strive to always stay updated with the latest trends and technologies in the tech industry.</p>
+      </div>
+      <div class="col-md-6">
+        <p>I also have a strong interest in developing user-friendly web applications and am continuously learning about the best practices for optimization, performance, and scalability. I am currently awaiting my Full Stack Development certificate from eMobilis and excited to bring my skills to new opportunities.</p>
       </div>
     </div>
   </div>
@@ -135,29 +151,79 @@
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Testimonials Section -->
+<section class="testimonials py-5" id="testimonials">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-5">🌟 Testimonials</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <div class="card-body">
+            <p class="card-text">"Evans is a highly skilled developer. His work on our backend systems improved performance drastically. Highly recommended!"</p>
+            <footer class="blockquote-footer text-white">John Doe, CTO at TechCorp</footer>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <div class="card-body">
+            <p class="card-text">"His expertise in Django and React helped our team build scalable applications quickly. I am impressed by his dedication."</p>
+            <footer class="blockquote-footer text-white">Jane Smith, CEO at WebSolutions</footer>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <div class="card-body">
+            <p class="card-text">"Evans was an excellent collaborator and delivered results above and beyond our expectations. A true professional."</p>
+            <footer class="blockquote-footer text-white">Michael Brown, Lead Developer at InnovateTech</footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Redesigned Contact Section -->
 <section class="contact py-5" id="contact">
   <div class="container">
-    <h2 class="text-center mb-4" data-aos="fade-up">📬 Contact Me</h2>
-    <div class="text-center mb-4" data-aos="fade-up">
-      <p><strong>Email:</strong> <a href="mailto:gichuruevansmutuma@gmail.com">gichuruevansmutuma@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+254757010521">+254 757 010 521</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/254757010521" target="_blank">Chat on WhatsApp</a></p>
-    </div>
+    <h2 class="text-center mb-5" data-aos="fade-up">📬 Let's Get In Touch</h2>
+    <div class="row g-5">
+      <!-- Contact Form -->
+      <div class="col-md-6" data-aos="fade-right">
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-green w-100">📨 Send Message</button>
+          <div id="form-status" class="mt-3 text-success" style="display: none;">✅ Message sent successfully!</div>
+        </form>
+      </div>
 
-    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="mx-auto" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="100">
-      <div class="mb-3">
-        <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+      <!-- Contact Info -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="p-4 bg-dark rounded">
+          <h4 class="mb-3">📞 Contact Details</h4>
+          <p><strong>Email:</strong><br><a href="mailto:gichuruevansmutuma@gmail.com" class="text-white">gichuruevansmutuma@gmail.com</a></p>
+          <p><strong>Phone:</strong><br><a href="tel:+254757010521" class="text-white">+254 757 010 521</a></p>
+          <p><strong>WhatsApp:</strong><br><a href="https://wa.me/254757010521" class="text-white" target="_blank">Click to Chat on WhatsApp</a></p>
+          <p><strong>Location:</strong><br>Nairobi, Kenya</p>
+          <div class="mt-4">
+            <h5>Follow Me</h5>
+            <a href="https://github.com/Evanstush" class="text-white me-3" target="_blank">GitHub</a>
+          </div>
+        </div>
       </div>
-      <div class="mb-3">
-        <input type="email" name="email" class="form-control" placeholder="Your Email" required />
-      </div>
-      <div class="mb-3">
-        <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
-      </div>
-      <button class="btn btn-green w-100" type="submit">Send Message</button>
-      <div id="form-status" class="mt-3 text-success" style="display: none;">✅ Message sent successfully!</div>
-    </form>
+    </div>
   </div>
 </section>
 
